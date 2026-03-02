@@ -90,18 +90,6 @@ export default function RoomDashboard() {
     const hostPlayer = players.find(p => p.id === room?.hostId)
     const unassignedPlayers = players.filter(p => p.teamId === null)
 
-    const handleLeaveRoom = async () => {
-        const token = localStorage.getItem('playerToken')
-        try {
-            await fetch(`${API_URL}/rooms/${roomId}/players/${playerId}`, {
-                method: 'DELETE',
-                headers: { 'Authorization': `Bearer ${token}` }
-            })
-        } catch (error) { console.error("Error al salir:", error) }
-
-        localStorage.removeItem('playerToken')
-        navigate('/')
-    }
 
     const handleKickPlayer = async (targetPlayerId) => {
         if (!window.confirm("¿Seguro que quieres expulsar a este jugador de la sala?")) return;
