@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useParams, useLocation, useNavigate } from 'react-router-dom'
-import '../GameScreen.css'
+import '../gameScreen.css'
 
 export default function GameScreen() {
     const { gameId } = useParams()
