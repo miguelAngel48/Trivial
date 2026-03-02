@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import '../HistorialScreen.css'
+import '../historialScreen.css'
 
 export default function HistorialScreen() {
     const navigate = useNavigate()
