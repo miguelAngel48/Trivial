@@ -253,7 +253,7 @@ export default function GameScreen() {
                                 {submittedAnswers[player.id] ? (
                                     <span className="textoVerde">Respuesta enviada </span>
                                 ) : (
-                                    player.type === 'Multiple Choice' ? (
+                                    player.type === 'Multiple Choice' || 'Buzzer' ? (
                                         <div className="contenedorOpciones">
                                             {player.options.map((options, index) => (
                                                 <button key={index} className="botonOpcion" onClick={() => submitAnswer(player.id, options)}>{options}</button>
